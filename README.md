@@ -65,12 +65,12 @@ If you have feedback, suggestions, or need help with UnattendedWinstall, please 
 - Support Arm, amd/intel 64 bit, amd/intel 32 bit
 
 
-- Apps preinstalled
-  - Microsoft edge
-  - terminal
-  - notepad (modern)
-  - media player (modern)
-  - photos
+ - Apps preinstalled
+   - Microsoft edge
+   - terminal
+   - notepad (modern)
+   - media player (modern)
+   - photos
 
 
 - What else?
