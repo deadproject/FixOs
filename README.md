@@ -14,7 +14,14 @@ UnattendedWinstall leverages Microsoft's [Answer Files](https://learn.microsoft.
 
 #### Automation
 
-- Enables automated configuration across multiple devices, saving time and effort by eliminating repetitive manual setups
+- Enables automated configuration across multiple devices, saving time and effort by eliminating repetitive manual setups.
+
+### Versions
+
+[![Version 2 Release (Latest)](https://img.shields.io/badge/Version-1.1.0%20Latest-0078D4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/deadproject/UnattendedWinstall/releases/tag/v1.1.0)
+[![Version 1 Release](https://img.shields.io/badge/Version-1.0.0-FFA500?style=for-the-badge&logo=github&logoColor=white)](https://github.com/deadproject/UnattendedWinstall/releases/tag/v1.0.0)
+
+
 
 > [!NOTE] 
 > UnattendedWinstall has been tested and optimized for personal use. For those interested in customizing further, [create your own answer file](https://schneegans.de/windows/unattend-generator/) 
@@ -45,15 +52,17 @@ If you have feedback, suggestions, or need help with UnattendedWinstall, please 
 
 ### Key Features
 
-- Windows 10/11 Pro is installed by default
-  - *prompted to enable after Windows installation*
+- Ability to choose Windows Edition (Pro is not enforced anymore as in v1.0.0)
 - Allows execution of PowerShell scripts by default
-- Features
-  - bypass the online account
-  - bypass the Wi-Fi selection
-  - bypass windows 11 requirements (tpm, secure boot, etc)
-  - add the ability to Sign in with local account
-  - Support Arm, amd/intel 64 bit, amd/intel 32 bit
+- bypass the online account
+- bypass the Wi-Fi selection
+- bypass windows 11 requirements (tpm, secure boot, etc)
+- add the ability to Sign in with local account
+- Sets privacy-related registry keys to disable telemetry
+- Configures Windows services for optimal performance
+- Enables the Ultimate Performance power plan
+- Limits Windows Update to install only security updates for two year
+- Support Arm, amd/intel 64 bit, amd/intel 32 bit
 
 
 - Apps preinstalled
@@ -68,12 +77,9 @@ If you have feedback, suggestions, or need help with UnattendedWinstall, please 
   - remove home & gallery from file Explorer
   - remove home page from settings
 
-- Privacy Settings 
-  - all are off expect microphone and camara 
-
 **Made by Project**
 
-**UnattendedWinstall version 1.0**
+**UnattendedWinstall**
 
 > [!NOTE] 
 > You need to reboot your system after the first logon, so the UanttendedScript.ps1 can apply the necessary system changes.
