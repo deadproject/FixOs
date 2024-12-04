@@ -1,4 +1,4 @@
-# UnattendedWinstall
+# Project's Unattended Windows installation
 
 ## Introduction
 
