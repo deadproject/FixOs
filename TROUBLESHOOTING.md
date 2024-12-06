@@ -80,7 +80,7 @@
 <details>
 <summary>Click to Show Fix</summary>
 
-### Reinstall the Microsoft Store - [Video Instructions](https://youtu.be/pjPtV_1cVOk)
+### Reinstall the Microsoft Store 
 
 1. Download, Install and Launch the [Xbox App for Windows](https://www.xbox.com/en-US/apps/xbox-app-for-pc)
 2. It will prompt you to install missing dependencies and the Microsoft Store is one of them.
