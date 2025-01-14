@@ -3,6 +3,8 @@
 ## Introduction
 
 UnattendedWinstall leverages Microsoft's [Answer Files](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/update-windows-settings-and-scripts-create-your-own-answer-file-sxs?view=windows-11) (or Unattend files) to automate and customize Windows installations. It enables modifications to Windows Settings and Packages directly in the Windows ISO during setup.
+**!Note**
+This is Answer file Created by Project,its just Verison of Memory tech tips for my personal use
 
 ### Why Use an Answer File?
 
@@ -24,6 +26,7 @@ UnattendedWinstall leverages Microsoft's [Answer Files](https://learn.microsoft.
 
 > [!NOTE] 
 > UnattendedWinstall has been tested and optimized for personal use. For those interested in customizing further, [create your own answer file](https://schneegans.de/windows/unattend-generator/) 
+> This answer file was created for my personal use, based on Schneegans' project and inspired by [Memory Tech Tips Answer File](https://github.com/memstechtips/UnattendedWinstall)
 
 ## <ins>**Installing Windows with an Answer File**</ins>
 In short, you need to include the `autounattend.xml` answer file on your Windows Installation Media so it can be read and executed during the Windows Setup. Here are a few ways to do it:
