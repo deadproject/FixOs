@@ -76,3 +76,5 @@ This command will download and execute the **FixOs** application directly from G
 Feel free to reach out to me for any questions, collaboration opportunities, or if you just want to talk about tech!
 
 [![Join our Discord](https://img.shields.io/badge/Join_Our_Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/EzHu6tw5PQ) 
+
+<p>&copy; 2025 vDevhub,All Rights Reserved.</p>
