@@ -1,6 +1,7 @@
 # FixOs by Project/Deadproject
 # Star us on GitHub: "https://github.com/deadproject/FixOs"
-# Visit our site: "https://vDevhub.pages.dev"
+# Visit our Site: "https://FixOs.pages.dev"
+# visit our Creator site: "https://vDevhub.pages.dev"
 # Enhancing your Windows experience with powerful tweaks and optimizations
 
 ## Tweaks
@@ -595,18 +596,23 @@ reg.exe add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CloudContent
 reg.exe add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /v DisableWindowsSpotlightActiveUser /t REG_DWORD /d 1 /f
 
 # Remove gallery from file explorer
-reg add "HKEY_CURRENT_USER\Software\Classes\CLSID\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c}" /v "System.IsPinnedToNameSpaceTree" /t REG_DWORD /d 0 /f
-reg add "HKEY_USERS\%USERPROFILE%\Software\Classes\CLSID\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c}" /v "System.IsPinnedToNameSpaceTree" /t REG_DWORD /d 0 /f
+reg.exe add "HKEY_CURRENT_USER\Software\Classes\CLSID\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c}" /v "System.IsPinnedToNameSpaceTree" /t REG_DWORD /d 0 /f
+reg.exe add "HKEY_USERS\%USERPROFILE%\Software\Classes\CLSID\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c}" /v "System.IsPinnedToNameSpaceTree" /t REG_DWORD /d 0 /f
 
 # Remove home from file explorer
-reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{f874310e-b6b7-47dc-bc84-b9e6b38f5903}" /f
+reg.exe delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{f874310e-b6b7-47dc-bc84-b9e6b38f5903}" /f
 
 # remove home page from settings
 reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v SettingsPageVisibility /t REG_SZ /d "Hide:Home" /f
 
 # File Explorer default to This PC
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v LaunchTo /t REG_DWORD /d 1 /f
+reg.exe "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v LaunchTo /t REG_DWORD /d 1 /f
 
+# Disable Recell
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Recell" -Name "Start" -Value 4 -Type DWord
+
+# Disable DICM
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\DICM" -Name "Start" -Value 4 -Type DWord
 
 # software remove/install
 
@@ -654,12 +660,31 @@ $installerPath = "$env:TEMP\pwshInstaller.msi"
 Invoke-WebRequest -Uri $pwshInstallerUrl -OutFile $installerPath
 Start-Process -FilePath msiexec.exe -ArgumentList "/i $installerPath /quiet" -Wait
 
-# Set PowerShell 7 as the default for terminal
+# Set PowerShell Core as the default for terminal
 $profilePath = "$env:USERPROFILE\Documents\WindowsPowerShell\profile.ps1"
 if (-not (Test-Path $profilePath)) {
     New-Item -Path $profilePath -ItemType File -Force
 }
 Add-Content -Path $profilePath -Value 'if ($PSVersionTable.PSVersion.Major -lt 7) { & "C:\Program Files\PowerShell\7\pwsh.exe" -NoExit -Command "Remove-Module PSReadLine; Import-Module PSReadLine" }'
+
+
+
+# Install Flow Launcher
+$flowLauncherInstallerUrl = (Invoke-RestMethod -Uri "https://api.github.com/repos/Flow-Launcher/Flow.Launcher/releases/latest").assets | Where-Object { $_.name -like "*Installer.exe" } | Select-Object -ExpandProperty browser_download_url
+$installerPath = "$env:TEMP\FlowLauncherInstaller.exe"
+Invoke-WebRequest -Uri $flowLauncherInstallerUrl -OutFile $installerPath
+Start-Process -FilePath $installerPath -ArgumentList "/silent" -Wait
+
+# Set Flow Launcher to start with Windows
+$flowLauncherAppPath = "C:\Program Files\Flow Launcher\Flow.Launcher.exe"
+$startupFolderPath = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
+$flowLauncherShortcutPath = "$startupFolderPath\Flow Launcher.lnk"
+if (-not (Test-Path $flowLauncherShortcutPath)) {
+    $shell = New-Object -ComObject WScript.Shell
+    $shortcut = $shell.CreateShortcut($flowLauncherShortcutPath)
+    $shortcut.TargetPath = $flowLauncherAppPath
+    $shortcut.Save()
+}
 
 # Remove unwanted software
 $appsToRemove = @(
@@ -712,4 +737,14 @@ foreach ($app in $appsToRemove) {
     Get-AppxProvisionedPackage -Online | Where-Object DisplayName -EQ $app | Remove-AppxProvisionedPackage -Online -ErrorAction SilentlyContinue
 }
 
+# Notify the user that the installation has finished
+Write-Host "Installation finished. If you have any issues, please list them on the GitHub repo: https://github.com/deadproject/FixOs"
 
+# Countdown from 5 to 1 before rebooting
+for ($i = 5; $i -ge 1; $i--) {
+    Write-Host "The system will reboot in $i seconds. Please wait..."
+    Start-Sleep -Seconds 1
+}
+
+# Reboot the system
+Restart-Computer -Force
