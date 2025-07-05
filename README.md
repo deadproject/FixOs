@@ -23,6 +23,7 @@ Additionally, **FixOs** is now part of the UnattendedWinstall project, enhancing
   - Configure Windows services for optimal performance and minimal background processes.
   - Limit Windows Updates to only security updates for two years.
 - **Pre-installed Apps:** 
+  - Microsoft Store
   - Microsoft Edge
   - Modern Notepad
   - Modern Media Player
