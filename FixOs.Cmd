@@ -32,22 +32,3 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\webcam" /v Value /t REG_SZ /d Deny /f
 
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userAccountInformation" /v Value /t REG_SZ /d Deny /f
-
-:: Reboot prompt
-echo.
-set /p userinput=Do you want to reboot the system now? (Y/N): 
-if /i "%userinput%"=="Y" (
-    echo Rebooting...
-    shutdown /r /t 5
-) else (
-    echo Reboot skipped. Restart manually later.
-)
-
-:: Done message
-echo.
-echo ====================================================
-echo ============== UNATTENDEDWINSTALL v1.2.0 ===========
-echo ==================== BY PROJECT ====================
-echo ====================================================
-pause
-exit /b
