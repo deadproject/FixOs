@@ -31,6 +31,7 @@ Additionally, **FixOs** is now part of the UnattendedWinstall project, enhancing
 - **File Explorer Tweaks:**
   - Remove Home and Gallery from the File Explorer view.
   - Remove the Home page from Windows Settings.
+  - Open File Explorer to This PC instead of Quick access.
 
 #### **FixOs Integration**:
 FixOs brings a set of post-installation tweaks to further refine the user experience. Some of the key features of FixOs include:
