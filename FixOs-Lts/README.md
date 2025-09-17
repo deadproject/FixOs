@@ -1,6 +1,6 @@
 # **FixOs-Lts**
 
-![FixOs-Lts Logo](https://github.com/deadproject/UnattendedWinstall/blob/main/Wallpaper-Lts.png?raw=true)
+![FixOs-Lts Logo](https://github.com/deadproject/FixOs/blob/main/FixOs-Lts/Wallpaper-Lts.png?raw=true)
 
 ---
 
