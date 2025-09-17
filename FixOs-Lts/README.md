@@ -34,4 +34,6 @@
 - **Remove Home & Gallery**: Remove the **Home** and **Gallery** sections from the **File Explorer** view for a cleaner interface.
 - **Disable Home Page in Settings**: Remove the **Home page** from the Windows **Settings** interface for a more streamlined user experience.
 
+### 🔗 [Click Here to Download](https://github.com/deadproject/FixOs/blob/main/FixOs-Lts/autounattend.xml)
+
 > ⚠️ **Note:** This is the **LTS version of FixOS** – optimized for **non-general use**, focusing on **maximum performance**, **minimal background activity**, and **enhanced privacy**. It strips down unnecessary features while preserving essential Windows functionality and core tools.
