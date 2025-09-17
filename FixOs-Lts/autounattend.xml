@@ -865,7 +865,7 @@ $htmlAccentColor = '#0078D4';
 		</File>
 		<File path="C:\Windows\Setup\Scripts\GetWallpaper.ps1">
 # Photo by Martin Damboldt: https://www.pexels.com/photo/gray-bridge-and-trees-814499/
-$url = 'https://github.com/deadproject/FixOs/blob/main/Wallpaper.png?raw=true';
+$url = 'https://github.com/deadproject/FixOs/blob/main/FixOs-Lts/Wallpaper-Lts.png?raw=true';
 return ( Invoke-WebRequest -Uri $url -UseBasicParsing -TimeoutSec 30 ).Content;
 		</File>
 		<File path="C:\Windows\Setup\Scripts\SetWallpaper.ps1">
@@ -1903,4 +1903,5 @@ $scripts = @(
 } *&gt;&amp;1 &gt;&gt; "C:\Windows\Setup\Scripts\FirstLogon.log";
 		</File>
 	</Extensions>
+
 </unattend>
