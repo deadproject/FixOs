@@ -536,7 +536,7 @@ $htmlAccentColor = '#0078D4';
 		</File>
 		<File path="C:\Windows\Setup\Scripts\GetWallpaper.ps1">
 # Photo by Jess Loiterton: https://www.pexels.com/photo/mountains-and-beach-under-dramatic-sky-5007737/
-$url = 'https://github.com/deadproject/UnattendedWinstall/blob/main/Wallpaper.png?raw=true';
+$url = 'https://github.com/deadproject/FixOs/blob/main/FixOs-Standard/Wallpaper.png?raw=true';
 return ( Invoke-WebRequest -Uri $url -UseBasicParsing -TimeoutSec 30 ).Content;
 		</File>
 		<File path="C:\Windows\Setup\Scripts\SetWallpaper.ps1">
@@ -1426,3 +1426,4 @@ $scripts = @(
 		</File>
 	</Extensions>
 </unattend>
+
