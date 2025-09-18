@@ -16,7 +16,6 @@
 - **Skip Online Account Setup**: Bypass the requirement for an online Microsoft account during setup.
 - **Skip Wi-Fi Setup**: Skip the Wi-Fi connection step during setup for offline installations.
 - **Bypass Hardware Checks**: Disable **TPM** and **Secure Boot** checks during installation to allow installation on unsupported hardware.
-- **Disable Windows Defender**: Turn off **Windows Defender** for users who prefer third-party security software or require a lighter system.
 
 ## **System Optimization** ⚡
 - **Disable Telemetry**: Apply registry tweaks to minimize telemetry data collection by Microsoft.
@@ -24,6 +23,7 @@
 - **Service Optimization**: Configure Windows services to minimize background processes and maximize system performance.
 - **Limit Windows Updates**: Restrict Windows Updates to only **security updates** for the next 2 years, preventing feature updates and non-essential updates.
 - **Disable Visual Effects**: Turn off animations and other visual effects to reduce resource usage and boost system speed.
+- **Disable Windows Defender**: Turn off **Windows Defender** for users who prefer third-party security software or require a lighter system.
 
 ## **Pre-Installed Apps** 📦
 - **Shipping Tool**
