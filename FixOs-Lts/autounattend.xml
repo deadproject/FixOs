@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
-	<!-- FixOs-Lts! https://github.com/deadproject/FixOs -->
+	<!-- FixOs-Lts! https://github.com/deadproject/FixOs/blob/main/FixOs-Lts/README.md -->
 	<settings pass="offlineServicing"></settings>
 	<settings pass="windowsPE">
 		<component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
@@ -1905,3 +1905,4 @@ $scripts = @(
 	</Extensions>
 
 </unattend>
+
