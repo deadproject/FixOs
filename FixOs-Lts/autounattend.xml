@@ -15,7 +15,7 @@
 		<component name="Microsoft-Windows-Setup" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
 			<UserData>
 				<ProductKey>
-					<Key>YTMG3-N6DKC-DKB77-7M9GH-8HVX7</Key>
+					<Key>VK7JG-NPHTM-C97JM-9MPGT-3V66T</Key>
 					<WillShowUI>OnError</WillShowUI>
 				</ProductKey>
 				<AcceptEula>true</AcceptEula>
@@ -91,7 +91,7 @@
 		<component name="Microsoft-Windows-Setup" processorArchitecture="arm64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
 			<UserData>
 				<ProductKey>
-					<Key>YTMG3-N6DKC-DKB77-7M9GH-8HVX7</Key>
+					<Key>VK7JG-NPHTM-C97JM-9MPGT-3V66T</Key>
 					<WillShowUI>OnError</WillShowUI>
 				</ProductKey>
 				<AcceptEula>true</AcceptEula>
@@ -167,7 +167,7 @@
 		<component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
 			<UserData>
 				<ProductKey>
-					<Key>YTMG3-N6DKC-DKB77-7M9GH-8HVX7</Key>
+					<Key>VK7JG-NPHTM-C97JM-9MPGT-3V66T</Key>
 					<WillShowUI>OnError</WillShowUI>
 				</ProductKey>
 				<AcceptEula>true</AcceptEula>
@@ -347,112 +347,28 @@
 			<UserLocale>en-US</UserLocale>
 		</component>
 		<component name="Microsoft-Windows-Shell-Setup" processorArchitecture="x86" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
-			<UserAccounts>
-				<LocalAccounts>
-					<LocalAccount wcm:action="add">
-						<Name>User</Name>
-						<DisplayName></DisplayName>
-						<Group>Administrators</Group>
-						<Password>
-							<Value></Value>
-							<PlainText>true</PlainText>
-						</Password>
-					</LocalAccount>
-				</LocalAccounts>
-			</UserAccounts>
-			<AutoLogon>
-				<Username>User</Username>
-				<Enabled>true</Enabled>
-				<LogonCount>1</LogonCount>
-				<Password>
-					<Value></Value>
-					<PlainText>true</PlainText>
-				</Password>
-			</AutoLogon>
 			<OOBE>
 				<ProtectYourPC>3</ProtectYourPC>
 				<HideEULAPage>true</HideEULAPage>
 				<HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
-				<HideOnlineAccountScreens>false</HideOnlineAccountScreens>
+				<HideOnlineAccountScreens>true</HideOnlineAccountScreens>
 			</OOBE>
-			<FirstLogonCommands>
-				<SynchronousCommand wcm:action="add">
-					<Order>1</Order>
-					<CommandLine>powershell.exe -WindowStyle Hidden -NoProfile -Command "Get-Content -LiteralPath 'C:\Windows\Setup\Scripts\FirstLogon.ps1' -Raw | Invoke-Expression;"</CommandLine>
-				</SynchronousCommand>
-			</FirstLogonCommands>
 		</component>
 		<component name="Microsoft-Windows-Shell-Setup" processorArchitecture="arm64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
-			<UserAccounts>
-				<LocalAccounts>
-					<LocalAccount wcm:action="add">
-						<Name>User</Name>
-						<DisplayName></DisplayName>
-						<Group>Administrators</Group>
-						<Password>
-							<Value></Value>
-							<PlainText>true</PlainText>
-						</Password>
-					</LocalAccount>
-				</LocalAccounts>
-			</UserAccounts>
-			<AutoLogon>
-				<Username>User</Username>
-				<Enabled>true</Enabled>
-				<LogonCount>1</LogonCount>
-				<Password>
-					<Value></Value>
-					<PlainText>true</PlainText>
-				</Password>
-			</AutoLogon>
 			<OOBE>
 				<ProtectYourPC>3</ProtectYourPC>
 				<HideEULAPage>true</HideEULAPage>
 				<HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
-				<HideOnlineAccountScreens>false</HideOnlineAccountScreens>
+				<HideOnlineAccountScreens>true</HideOnlineAccountScreens>
 			</OOBE>
-			<FirstLogonCommands>
-				<SynchronousCommand wcm:action="add">
-					<Order>1</Order>
-					<CommandLine>powershell.exe -WindowStyle Hidden -NoProfile -Command "Get-Content -LiteralPath 'C:\Windows\Setup\Scripts\FirstLogon.ps1' -Raw | Invoke-Expression;"</CommandLine>
-				</SynchronousCommand>
-			</FirstLogonCommands>
 		</component>
 		<component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
-			<UserAccounts>
-				<LocalAccounts>
-					<LocalAccount wcm:action="add">
-						<Name>User</Name>
-						<DisplayName></DisplayName>
-						<Group>Administrators</Group>
-						<Password>
-							<Value></Value>
-							<PlainText>true</PlainText>
-						</Password>
-					</LocalAccount>
-				</LocalAccounts>
-			</UserAccounts>
-			<AutoLogon>
-				<Username>User</Username>
-				<Enabled>true</Enabled>
-				<LogonCount>1</LogonCount>
-				<Password>
-					<Value></Value>
-					<PlainText>true</PlainText>
-				</Password>
-			</AutoLogon>
 			<OOBE>
 				<ProtectYourPC>3</ProtectYourPC>
 				<HideEULAPage>true</HideEULAPage>
 				<HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
-				<HideOnlineAccountScreens>false</HideOnlineAccountScreens>
+				<HideOnlineAccountScreens>true</HideOnlineAccountScreens>
 			</OOBE>
-			<FirstLogonCommands>
-				<SynchronousCommand wcm:action="add">
-					<Order>1</Order>
-					<CommandLine>powershell.exe -WindowStyle Hidden -NoProfile -Command "Get-Content -LiteralPath 'C:\Windows\Setup\Scripts\FirstLogon.ps1' -Raw | Invoke-Expression;"</CommandLine>
-				</SynchronousCommand>
-			</FirstLogonCommands>
 		</component>
 	</settings>
 	<Extensions xmlns="https://schneegans.de/windows/unattend-generator/">
@@ -673,6 +589,71 @@ $logfile = 'C:\Windows\Setup\Scripts\RemoveFeatures.log';
 		$result | ConvertTo-Json -Depth 3 -Compress;
 	}
 } *&gt;&amp;1 &gt;&gt; $logfile;
+		</File>
+		<File path="C:\Windows\Setup\Scripts\PauseWindowsUpdate.ps1">
+$formatter = {
+	$args[0].ToString( "yyyy'-'MM'-'dd'T'HH':'mm':'ssK" );
+};
+$now = [datetime]::UtcNow;
+$start = &amp; $formatter $now;
+$end = &amp; $formatter $now.AddDays( 7 );
+
+$params = @{
+	LiteralPath = 'Registry::HKLM\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings';
+	Type = 'String';
+	Force = $true;
+};
+
+Set-ItemProperty @params -Name 'PauseFeatureUpdatesStartTime' -Value $start;
+Set-ItemProperty @params -Name 'PauseFeatureUpdatesEndTime' -Value $end;
+Set-ItemProperty @params -Name 'PauseQualityUpdatesStartTime' -Value $start;
+Set-ItemProperty @params -Name 'PauseQualityUpdatesEndTime' -Value $end;
+Set-ItemProperty @params -Name 'PauseUpdatesStartTime' -Value $start;
+Set-ItemProperty @params -Name 'PauseUpdatesExpiryTime' -Value $end;
+		</File>
+		<File path="C:\Windows\Setup\Scripts\PauseWindowsUpdate.xml">
+&lt;Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task"&gt;
+	&lt;Triggers&gt;
+		&lt;BootTrigger&gt;
+			&lt;Repetition&gt;
+				&lt;Interval&gt;P1D&lt;/Interval&gt;
+				&lt;StopAtDurationEnd&gt;false&lt;/StopAtDurationEnd&gt;
+			&lt;/Repetition&gt;
+			&lt;Enabled&gt;true&lt;/Enabled&gt;
+		&lt;/BootTrigger&gt;
+	&lt;/Triggers&gt;
+	&lt;Principals&gt;
+		&lt;Principal id="Author"&gt;
+			&lt;UserId&gt;S-1-5-19&lt;/UserId&gt;
+			&lt;RunLevel&gt;LeastPrivilege&lt;/RunLevel&gt;
+		&lt;/Principal&gt;
+	&lt;/Principals&gt;
+	&lt;Settings&gt;
+		&lt;MultipleInstancesPolicy&gt;IgnoreNew&lt;/MultipleInstancesPolicy&gt;
+		&lt;DisallowStartIfOnBatteries&gt;false&lt;/DisallowStartIfOnBatteries&gt;
+		&lt;StopIfGoingOnBatteries&gt;false&lt;/StopIfGoingOnBatteries&gt;
+		&lt;AllowHardTerminate&gt;true&lt;/AllowHardTerminate&gt;
+		&lt;StartWhenAvailable&gt;false&lt;/StartWhenAvailable&gt;
+		&lt;RunOnlyIfNetworkAvailable&gt;false&lt;/RunOnlyIfNetworkAvailable&gt;
+		&lt;IdleSettings&gt;
+			&lt;StopOnIdleEnd&gt;true&lt;/StopOnIdleEnd&gt;
+			&lt;RestartOnIdle&gt;false&lt;/RestartOnIdle&gt;
+		&lt;/IdleSettings&gt;
+		&lt;AllowStartOnDemand&gt;true&lt;/AllowStartOnDemand&gt;
+		&lt;Enabled&gt;true&lt;/Enabled&gt;
+		&lt;Hidden&gt;false&lt;/Hidden&gt;
+		&lt;RunOnlyIfIdle&gt;false&lt;/RunOnlyIfIdle&gt;
+		&lt;WakeToRun&gt;false&lt;/WakeToRun&gt;
+		&lt;ExecutionTimeLimit&gt;PT72H&lt;/ExecutionTimeLimit&gt;
+		&lt;Priority&gt;7&lt;/Priority&gt;
+	&lt;/Settings&gt;
+	&lt;Actions Context="Author"&gt;
+		&lt;Exec&gt;
+			&lt;Command&gt;C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe&lt;/Command&gt;
+			&lt;Arguments&gt;-Command "Get-Content -LiteralPath 'C:\Windows\Setup\Scripts\PauseWindowsUpdate.ps1' -Raw | Invoke-Expression;"&lt;/Arguments&gt;
+		&lt;/Exec&gt;
+	&lt;/Actions&gt;
+&lt;/Task&gt;
 		</File>
 		<File path="C:\Windows\Setup\Scripts\ShowAllTrayIcons.ps1">
 if( [System.Environment]::OSVersion.Version.Build -lt 20000 ) {
@@ -1496,8 +1477,7 @@ reg.exe delete "HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explo
 reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v SettingsPageVisibility /t REG_SZ /d "Hide:Home" /f
 		</File>
 		<File path="C:\Windows\Setup\Scripts\unattend-02.cmd">
-:: Tweaks
-
+:: ======= Privacy Tweaks =======
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v Enabled /t REG_DWORD /d 0 /f
 reg add "HKCU\Control Panel\International\User Profile" /v HttpAcceptLanguageOptOut /t REG_DWORD /d 1 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Start_TrackProgs /t REG_DWORD /d 0 /f
@@ -1524,48 +1504,36 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v SafeS
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows Search" /v EnableFindMyFiles /t REG_DWORD /d 0 /f
 
+:: ======= Permissions Tweaks =======
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors" /v DisableLocation /t REG_DWORD /d 1 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location" /v Value /t REG_SZ /d Deny /f
-
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\webcam" /v Value /t REG_SZ /d Deny /f
-
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userAccountInformation" /v Value /t REG_SZ /d Deny /f
-		</File>
-		<File path="C:\Windows\Setup\Scripts\unattend-03.cmd">
-:: Tweaks
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v Enabled /t REG_DWORD /d 0 /f
-reg add "HKCU\Control Panel\International\User Profile" /v HttpAcceptLanguageOptOut /t REG_DWORD /d 1 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Start_TrackProgs /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SubscribedContent-338389Enabled /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v SubscribedContent-338393Enabled /t REG_DWORD /d 0 /f
+:: ======= UI &amp; UX Performance Tweaks =======
+reg add "HKCU\Control Panel\Desktop" /v MenuShowDelay /t REG_SZ /d 0 /f
+reg add "HKCU\Control Panel\Desktop" /v DragFullWindows /t REG_SZ /d 0 /f
+reg add "HKCU\Control Panel\Desktop" /v VisualFXSetting /t REG_DWORD /d 2 /f
+reg add "HKCU\Control Panel\Desktop" /v UserPreferencesMask /t REG_BINARY /d 90 12 03 80 /f
 
-reg add "HKCU\Software\Microsoft\Speech_OneCore\Settings\OnlineSpeechPrivacy" /v HasAccepted /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ListviewAlphaSelect /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v EnableBalloonTips /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ExtendedUIHoverTime /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ListviewSmoothScrolling /t REG_DWORD /d 0 /f
 
-reg add "HKCU\Software\Microsoft\InputPersonalization" /v RestrictImplicitInkCollection /t REG_DWORD /d 1 /f
-reg add "HKCU\Software\Microsoft\InputPersonalization" /v RestrictImplicitTextCollection /t REG_DWORD /d 1 /f
-reg add "HKCU\Software\Microsoft\InputPersonalization\TrainedDataStore" /v HarvestContacts /t REG_DWORD /d 0 /f
+:: ======= Explorer Tweaks =======
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSuperHidden /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v DontUseSearchColumn /t REG_DWORD /d 1 /f
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Privacy" /v TailoredExperiencesWithDiagnosticDataEnabled /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Siuf\Rules" /v NumberOfSIUFInPeriod /t REG_DWORD /d 0 /f
+:: ======= Startup &amp; Boot Tweaks =======
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoStartupDelay /t REG_DWORD /d 1 /f
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v EnableActivityFeed /t REG_DWORD /d 0 /f
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v PublishUserActivities /t REG_DWORD /d 0 /f
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\System" /v UploadUserActivities /t REG_DWORD /d 0 /f
 
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v IsDeviceSearchHistoryEnabled /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v IsCloudSearchEnabled /t REG_DWORD /d 0 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v SafeSearchMode /t REG_DWORD /d 2 /f
+:: ======= Remove Microsoft Store =======
+PowerShell -Command "Get-AppxPackage *WindowsStore* | Remove-AppxPackage"
+PowerShell -Command "Get-AppxProvisionedPackage -Online | Where-Object {$_.DisplayName -like '*WindowsStore*'} | Remove-AppxProvisionedPackage -Online"
 
-reg add "HKLM\SOFTWARE\Microsoft\Windows Search" /v EnableFindMyFiles /t REG_DWORD /d 0 /f
-
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors" /v DisableLocation /t REG_DWORD /d 1 /f
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location" /v Value /t REG_SZ /d Deny /f
-
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\webcam" /v Value /t REG_SZ /d Deny /f
-
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userAccountInformation" /v Value /t REG_SZ /d Deny /f
 		</File>
 		<File path="C:\Windows\Setup\Scripts\Specialize.ps1">
 $scripts = @(
@@ -1600,10 +1568,10 @@ $scripts = @(
 		net.exe accounts /maxpwage:UNLIMITED;
 	};
 	{
-		reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Notifications" /v DisableNotifications /t REG_DWORD /d 1 /f;
+		Register-ScheduledTask -TaskName 'PauseWindowsUpdate' -Xml $( Get-Content -LiteralPath 'C:\Windows\Setup\Scripts\PauseWindowsUpdate.xml' -Raw );
 	};
 	{
-		reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\CI\Policy" /v VerifiedAndReputablePolicyState /t REG_DWORD /d 0 /f;
+		reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Notifications" /v DisableNotifications /t REG_DWORD /d 1 /f;
 	};
 	{
 		reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" /v SmartScreenEnabled /t REG_SZ /d "Off" /f;
@@ -1612,6 +1580,9 @@ $scripts = @(
 		reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WTDS\Components" /v NotifyPasswordReuse /t REG_DWORD /d 0 /f;
 		reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WTDS\Components" /v NotifyUnsafeApp /t REG_DWORD /d 0 /f;
 		reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender Security Center\Systray" /v HideSystray /t REG_DWORD /d 1 /f;
+	};
+	{
+		reg.exe add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v EnableLUA /t REG_DWORD /d 0 /f
 	};
 	{
 		reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\FileSystem" /v LongPathsEnabled /t REG_DWORD /d 1 /f
@@ -1726,7 +1697,7 @@ $scripts = @(
 		Get-Content -LiteralPath 'C:\Windows\Setup\Scripts\SetWallpaper.ps1' -Raw | Invoke-Expression;
 	};
 	{
-		C:\Windows\Setup\Scripts\unattend-03.cmd;
+		C:\Windows\Setup\Scripts\unattend-02.cmd;
 	};
 	{
 		Get-Process -Name 'explorer' -ErrorAction 'SilentlyContinue' | Where-Object -FilterScript {
@@ -1870,39 +1841,5 @@ $scripts = @(
   }
 } *&gt;&amp;1 &gt;&gt; "C:\Windows\Setup\Scripts\DefaultUser.log";
 		</File>
-		<File path="C:\Windows\Setup\Scripts\FirstLogon.ps1">
-$scripts = @(
-	{
-		Set-ItemProperty -LiteralPath 'Registry::HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon' -Name 'AutoLogonCount' -Type 'DWord' -Force -Value 0;
-	};
-	{
-		C:\Windows\Setup\Scripts\unattend-02.cmd;
-	};
-);
-
-&amp; {
-  [float] $complete = 0;
-  [float] $increment = 100 / $scripts.Count;
-  foreach( $script in $scripts ) {
-    Write-Progress -Activity 'Running scripts to finalize your Windows installation. Do not close this window.' -PercentComplete $complete;
-    '*** Will now execute command &#xAB;{0}&#xBB;.' -f $(
-      $str = $script.ToString().Trim() -replace '\s+', ' ';
-      $max = 100;
-      if( $str.Length -le $max ) {
-        $str;
-      } else {
-        $str.Substring( 0, $max - 1 ) + '&#x2026;';
-      }
-    );
-    $start = [datetime]::Now;
-    &amp; $script;
-    '*** Finished executing command after {0:0} ms.' -f [datetime]::Now.Subtract( $start ).TotalMilliseconds;
-    "`r`n" * 3;
-    $complete += $increment;
-  }
-} *&gt;&amp;1 &gt;&gt; "C:\Windows\Setup\Scripts\FirstLogon.log";
-		</File>
 	</Extensions>
-
 </unattend>
-
