@@ -1,5 +1,4 @@
-:: Tweaks
-
+:: ======= Privacy Tweaks =======
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v Enabled /t REG_DWORD /d 0 /f
 reg add "HKCU\Control Panel\International\User Profile" /v HttpAcceptLanguageOptOut /t REG_DWORD /d 1 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Start_TrackProgs /t REG_DWORD /d 0 /f
@@ -26,28 +25,32 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v SafeS
 
 reg add "HKLM\SOFTWARE\Microsoft\Windows Search" /v EnableFindMyFiles /t REG_DWORD /d 0 /f
 
+:: ======= Permissions Tweaks =======
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors" /v DisableLocation /t REG_DWORD /d 1 /f
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location" /v Value /t REG_SZ /d Deny /f
-
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\webcam" /v Value /t REG_SZ /d Deny /f
-
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\userAccountInformation" /v Value /t REG_SZ /d Deny /f
 
-:: Reboot prompt
-echo.
-set /p userinput=Do you want to reboot the system now? (Y/N): 
-if /i "%userinput%"=="Y" (
-    echo Rebooting...
-    shutdown /r /t 5
-) else (
-    echo Reboot skipped. Restart manually later.
-)
+:: ======= UI & UX Performance Tweaks =======
+reg add "HKCU\Control Panel\Desktop" /v MenuShowDelay /t REG_SZ /d 0 /f
+reg add "HKCU\Control Panel\Desktop" /v DragFullWindows /t REG_SZ /d 0 /f
+reg add "HKCU\Control Panel\Desktop" /v VisualFXSetting /t REG_DWORD /d 2 /f
+reg add "HKCU\Control Panel\Desktop" /v UserPreferencesMask /t REG_BINARY /d 90 12 03 80 /f
 
-:: Done message
-echo.
-echo ====================================================
-echo ============== UNATTENDEDWINSTALL v1.2.0 ===========
-echo ==================== BY PROJECT ====================
-echo ====================================================
-pause
-exit /b
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ListviewAlphaSelect /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v EnableBalloonTips /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ExtendedUIHoverTime /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ListviewSmoothScrolling /t REG_DWORD /d 0 /f
+
+:: ======= Explorer Tweaks =======
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowSuperHidden /t REG_DWORD /d 1 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /v DontUseSearchColumn /t REG_DWORD /d 1 /f
+
+:: ======= Startup & Boot Tweaks =======
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoStartupDelay /t REG_DWORD /d 1 /f
+
+
+:: ======= Remove Microsoft Store =======
+PowerShell -Command "Get-AppxPackage *WindowsStore* | Remove-AppxPackage"
+PowerShell -Command "Get-AppxProvisionedPackage -Online | Where-Object {$_.DisplayName -like '*WindowsStore*'} | Remove-AppxProvisionedPackage -Online"
